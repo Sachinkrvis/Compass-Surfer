@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">KOTLIN_FRAGMENT_LRN</string>
+    <string name="home">Home</string>
+    <string name="peoples">Peoples</string>
+    <string name="department">Department</string>
+    <string name="profile">Profile</string>
+    <string name="refresh">Refresh</string>
+    <string name="setting">Setting</string>
+    <string name="reset_all">Reset all</string>
+</resources>

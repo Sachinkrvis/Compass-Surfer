@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "815684755399",
+    "project_id": "compasssurfer",
+    "storage_bucket": "compasssurfer.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:815684755399:android:4bae66f1977d700e1603e2",
+        "android_client_info": {
+          "package_name": "com.example.kotlin_fragment_lrn"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCf1BLE9TlENThmurLOkSxW1wkjWz_V0q4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

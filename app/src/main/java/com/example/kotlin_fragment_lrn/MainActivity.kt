@@ -1,14 +1,20 @@
 package com.example.kotlin_fragment_lrn
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.AdapterView.OnItemSelectedListener
 import android.widget.Toast
 import androidx.fragment.app.commit
+import com.example.kotlin_fragment_lrn.Authentication.LogIn
+import com.example.kotlin_fragment_lrn.Authentication.signUp
+import com.example.kotlin_fragment_lrn.Fragments.fragment_Department
+import com.example.kotlin_fragment_lrn.Fragments.fragment_Home
+import com.example.kotlin_fragment_lrn.Fragments.fragment_peoples
+import com.example.kotlin_fragment_lrn.Fragments.fragment_profile
 import com.example.kotlin_fragment_lrn.databinding.ActivityMainBinding
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.example.kotlin_fragment_lrn.maps.MapsActivity
 import com.google.android.material.navigation.NavigationBarView
 
 class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListener {

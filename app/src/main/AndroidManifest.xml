@@ -15,7 +15,7 @@
         android:theme="@style/Theme.KOTLIN_FRAGMENT_LRN"
         tools:targetApi="31">
         <activity
-            android:name=".Authentication.GetStarted"
+            android:name=".view.Authentication.GetStarted"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,10 +23,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Authentication.signUp"
+            android:name=".view.Authentication.signUp"
             android:exported="false" />
         <activity
-            android:name=".Authentication.LogIn"
+            android:name=".view.Authentication.LogIn"
             android:exported="true" >
         </activity>
         <activity
@@ -52,7 +52,7 @@
             android:exported="false"
             android:label="@string/title_activity_maps" />
         <activity
-            android:name=".MainActivity"
+            android:name=".view.MainActivity"
             android:exported="true">
 
         </activity>

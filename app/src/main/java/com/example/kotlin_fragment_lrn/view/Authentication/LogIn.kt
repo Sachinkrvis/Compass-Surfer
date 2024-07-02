@@ -1,11 +1,10 @@
-package com.example.kotlin_fragment_lrn.Authentication
+package com.example.kotlin_fragment_lrn.view.Authentication
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.kotlin_fragment_lrn.Fragments.fragment_Home
-import com.example.kotlin_fragment_lrn.MainActivity
+import com.example.kotlin_fragment_lrn.view.MainActivity
 import com.example.kotlin_fragment_lrn.databinding.ActivityLogInBinding
 import com.google.firebase.auth.FirebaseAuth
 
@@ -20,7 +19,7 @@ class LogIn : AppCompatActivity() {
         firebaseAuth= FirebaseAuth.getInstance()
 
        binding.newUser.setOnClickListener {
-           val intent=Intent(this,signUp::class.java)
+           val intent=Intent(this, signUp::class.java)
            startActivity(intent)
        }
 
@@ -31,7 +30,7 @@ class LogIn : AppCompatActivity() {
            if(username.isNotEmpty() && password.isNotEmpty()){
                firebaseAuth.signInWithEmailAndPassword(username,password).addOnCompleteListener {
                    if(it.isSuccessful){
-                       val intent=Intent(this,MainActivity::class.java)
+                       val intent=Intent(this, MainActivity::class.java)
                        startActivity(intent)
                    }else{
                        Toast.makeText(this, "Invalid Username and Password", Toast.LENGTH_SHORT).show()

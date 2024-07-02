@@ -1,20 +1,17 @@
-package com.example.kotlin_fragment_lrn
+package com.example.kotlin_fragment_lrn.view
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.fragment.app.commit
-import com.example.kotlin_fragment_lrn.Authentication.LogIn
-import com.example.kotlin_fragment_lrn.Authentication.signUp
-import com.example.kotlin_fragment_lrn.Fragments.fragment_Department
-import com.example.kotlin_fragment_lrn.Fragments.fragment_Home
-import com.example.kotlin_fragment_lrn.Fragments.fragment_peoples
-import com.example.kotlin_fragment_lrn.Fragments.fragment_profile
+import com.example.kotlin_fragment_lrn.view.Fragments.fragment_Department
+import com.example.kotlin_fragment_lrn.view.Fragments.fragment_Home
+import com.example.kotlin_fragment_lrn.view.Fragments.fragment_peoples
+import com.example.kotlin_fragment_lrn.view.Fragments.fragment_profile
+import com.example.kotlin_fragment_lrn.R
 import com.example.kotlin_fragment_lrn.databinding.ActivityMainBinding
-import com.example.kotlin_fragment_lrn.maps.MapsActivity
 import com.google.android.material.navigation.NavigationBarView
 
 class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListener {
@@ -76,19 +73,20 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
         return true
     }
 
-    fun onClickedProfile(): Boolean {
-        supportFragmentManager.commit {
-            replace(R.id.fragmement_content, fragment_profile())
-        }
-        return true
-    }
+//    fun onClickedProfile(): Boolean {
+//        supportFragmentManager.commit {
+//            replace(R.id.fragmement_content, fragment_profile())
+//        }
+//        return true
+//    }
 
+    // this will affect the code on the github
     // on item is selected on the Navigation bar(calling when expression)
     override fun onNavigationItemSelected(item: MenuItem) = when (item.itemId) {
         R.id.nav_home -> onClickedHome()
         R.id.nav_peoples -> onClickedPeoples()
         R.id.nav_department -> onClickedDepartment()
-        R.id.nav_profile -> onClickedProfile()
+//        R.id.nav_profile -> onClickedProfile()
         else -> false
     }
 }

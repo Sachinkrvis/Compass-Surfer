@@ -1,10 +1,9 @@
-package com.example.kotlin_fragment_lrn.Authentication
+package com.example.kotlin_fragment_lrn.view.Authentication
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.kotlin_fragment_lrn.MainActivity
-import com.example.kotlin_fragment_lrn.R
+import com.example.kotlin_fragment_lrn.view.MainActivity
 import com.example.kotlin_fragment_lrn.databinding.ActivityGetStartedBinding
 import com.google.firebase.auth.FirebaseAuth
 
@@ -19,7 +18,7 @@ class GetStarted : AppCompatActivity() {
         firebaseAuth= FirebaseAuth.getInstance()
 
         binding.getStarted.setOnClickListener {
-            val intent=Intent(this,LogIn::class.java)
+            val intent=Intent(this, LogIn::class.java)
             startActivity(intent)
         }
 

@@ -1,4 +1,4 @@
-package com.example.kotlin_fragment_lrn.adapters
+package com.example.kotlin_fragment_lrn.view.adapters
 
 import android.app.Dialog
 import android.content.Intent

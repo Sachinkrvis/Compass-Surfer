@@ -1,4 +1,4 @@
-package com.example.kotlin_fragment_lrn.Authentication
+package com.example.kotlin_fragment_lrn.view.Authentication
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -19,7 +19,7 @@ class signUp : AppCompatActivity() {
         firebaseAuth= FirebaseAuth.getInstance()
 
         binding.logintext.setOnClickListener {
-            val intent=Intent(this,LogIn::class.java)
+            val intent=Intent(this, LogIn::class.java)
             startActivity(intent)
         }
 
@@ -32,7 +32,7 @@ class signUp : AppCompatActivity() {
                 if(password==cnfPassword){
                     firebaseAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener {
                         if(it.isSuccessful){
-                            val intent=Intent(this,LogIn::class.java)
+                            val intent=Intent(this, LogIn::class.java)
                             startActivity(intent)
                         }else{
                             Toast.makeText(this, "Invalid User", Toast.LENGTH_SHORT).show()

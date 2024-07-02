@@ -1,4 +1,4 @@
-package com.example.kotlin_fragment_lrn.Fragments
+package com.example.kotlin_fragment_lrn.view.Fragments
 
 import android.content.Intent
 import android.os.Bundle
@@ -13,9 +13,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.kotlin_fragment_lrn.R
 import com.example.kotlin_fragment_lrn.adapterContainer.container
 import com.example.kotlin_fragment_lrn.adapterContainer.container_newFeed
-import com.example.kotlin_fragment_lrn.adapters.adapter_newFeed
-import com.example.kotlin_fragment_lrn.adapters.adapter_recents
-import com.example.kotlin_fragment_lrn.adapters.apiInterface
+import com.example.kotlin_fragment_lrn.view.adapters.adapter_newFeed
+import com.example.kotlin_fragment_lrn.view.adapters.adapter_recents
+import com.example.kotlin_fragment_lrn.model.apiInterface
 import com.example.kotlin_fragment_lrn.databinding.ActivityFragmentHomeBinding
 import com.example.kotlin_fragment_lrn.maps.MapsActivity
 import com.example.kotlin_fragment_lrn.myData_package.myDataItem

@@ -73,12 +73,12 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
         return true
     }
 
-//    fun onClickedProfile(): Boolean {
-//        supportFragmentManager.commit {
-//            replace(R.id.fragmement_content, fragment_profile())
-//        }
-//        return true
-//    }
+    fun onClickedProfile(): Boolean {
+        supportFragmentManager.commit {
+            replace(R.id.fragmement_content, fragment_profile())
+        }
+        return true
+    }
 
     // this will affect the code on the github
     // on item is selected on the Navigation bar(calling when expression)
@@ -86,7 +86,7 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
         R.id.nav_home -> onClickedHome()
         R.id.nav_peoples -> onClickedPeoples()
         R.id.nav_department -> onClickedDepartment()
-//        R.id.nav_profile -> onClickedProfile()
+        R.id.nav_profile -> onClickedProfile()
         else -> false
     }
 }

@@ -86,7 +86,7 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
         R.id.nav_home -> onClickedHome()
         R.id.nav_peoples -> onClickedPeoples()
         R.id.nav_department -> onClickedDepartment()
-        R.id.nav_profile -> onClickedProfile()
+//        R.id.nav_profile -> onClickedProfile()
         else -> false
     }
 }

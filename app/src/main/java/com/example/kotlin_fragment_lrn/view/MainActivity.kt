@@ -73,12 +73,7 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
         return true
     }
 
-    fun onClickedProfile(): Boolean {
-        supportFragmentManager.commit {
-            replace(R.id.fragmement_content, fragment_profile())
-        }
-        return true
-    }
+
 
     // this will affect the code on the github
     // on item is selected on the Navigation bar(calling when expression)

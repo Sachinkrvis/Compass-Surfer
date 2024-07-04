@@ -1,26 +1,34 @@
-# Workflow name
-name: Build
+name: Build and Test Android App
+
 on:
-# When it will be triggered
-# And in which branch
-  pull_request:
   push:
     branches:
       - main
-# Where will they run
+
+env:
+  ANDROID_HOME: /usr/local/android-sdk
+
 jobs:
   build:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ ubuntu-20.04, windows-latest, macos-latest ]
+    runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
-      - uses: fwilhe2/setup-kotlin@main
-        with:
-          install-native: true
-      - run: kotlinc-native foo.kt
-      - run: ./program.exe
-        if: ${{ matrix.os == 'windows-latest' }}
-      - run: ./program.kexe
-        if: ${{ matrix.os != 'windows-latest' }}
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up JDK
+      uses: actions/setup-java@v1
+      with:
+        java-version: 18
+
+    - name: Set up Android SDK
+      uses: actions/setup-android@v1
+      with:
+        android-sdk-version: 30
+        licenses: 'android-sdk-preview-license-52d11cd2'
+
+    - name: Build Android App
+      run: ./gradlew assembleDebug
+
+    - name: Test Android App
+      run: ./gradlew test
